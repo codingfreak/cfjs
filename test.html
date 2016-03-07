@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<h1>Javascript-Test</h1>
+		
+		<script src="https://code.jquery.com/jquery-git.min.js" type="text/javascript"></script> 
+		<script src="codingfreaks.utils.basic.js" type="text/javascript"></script>
+		<script type="text/javascript">			
+			$(function() {				
+				var util = new codingfreaks.BasicUtils();
+				try {
+					var parameter = util.getUrlParameter('test', true);
+					console.log(parameter);	
+				} catch (e) {
+					console.log('Error: ' + e.Message);
+				}	
+				var x = '10';
+				var y = 'Hello';
+				y = null;
+				console.log(util.isUndefined(x));
+				console.log(util.isDefined(x));
+				console.log(typeof(y));
+				console.log(util.clearNullAsString(x, true));							
+			});
+		</script>
+	</body>
+</html>
